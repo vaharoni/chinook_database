@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["amit.sites@gmail.com"]
 
   spec.summary       = %q{Version 1.4 of the Chinook sample database}
-  spec.description   = %q{}
-  spec.homepage      = "http://chinookdatabase.codeplex.com"
+  spec.description   = %q{See http://chinookdatabase.codeplex.com}
+  spec.homepage      = "https://github.com/vaharoni/chinook_database"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
