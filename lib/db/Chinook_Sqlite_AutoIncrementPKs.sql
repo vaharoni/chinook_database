@@ -135,7 +135,7 @@ CREATE TABLE [playlists_tracks]
 
 CREATE TABLE [tracks]
 (
-    [track_id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     [name] NVARCHAR(200)  NOT NULL,
     [album_id] INTEGER,
     [media_type_id] INTEGER  NOT NULL,
