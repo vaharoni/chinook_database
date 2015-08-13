@@ -1,15 +1,16 @@
 # ChinookDatabase
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/chinook_database`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+ActiveRecord wrapper classes to the sample SQLite database as described here: https://chinookdatabase.codeplex.com/.
+Useful for using as test fixtures or development.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'chinook_database'
+group :development, :test do
+  gem 'chinook_database'
+end  
 ```
 
 And then execute:
@@ -22,7 +23,40 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'chinook_database'
+ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ChinookDatabase.path
+
+Album.count
+# => 347
+
+Artist.count
+# => 275
+
+Customer.count
+# => 59
+
+Employee.count
+# => 8
+
+Genre.count
+# => 25
+
+Invoice.count
+# => 412
+
+InvoiceLine.count 
+# => 2240
+
+MediaType.count
+# => 5
+
+PlayList.count
+# => 18
+
+Track.count
+# => 3503
+```
 
 ## Development
 
