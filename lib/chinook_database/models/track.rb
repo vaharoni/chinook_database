@@ -16,5 +16,5 @@ class Track < ActiveRecord::Base
   belongs_to :media_type, foreign_key: 'MediaTypeId'
   belongs_to :genre, foreign_key: 'GenreId'
 
-  has_and_belongs_to_many :play_lists, join_table: 'PlayListTrack', foreign_key: 'TrackId', association_foreign_key: 'PlayListId'
+  has_and_belongs_to_many :playlists, join_table: 'PlaylistTrack', foreign_key: 'TrackId', association_foreign_key: 'PlaylistId'
 end

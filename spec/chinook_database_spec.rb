@@ -14,7 +14,7 @@ describe ChinookDatabase do
     expect(Invoice.count).to eq(412)
     expect(InvoiceLine.count).to eq(2240)
     expect(MediaType.count).to eq(5)
-    expect(PlayList.count).to eq(18)
+    expect(Playlist.count).to eq(18)
     expect(Track.count).to eq(3503)
   end
 end

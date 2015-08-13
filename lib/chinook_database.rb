@@ -2,16 +2,16 @@ require "chinook_database/version"
 
 require 'sqlite3'
 require 'active_record'
-require_relative '../lib/chinook_database/models/album'
-require_relative '../lib/chinook_database/models/artist'
-require_relative '../lib/chinook_database/models/customer'
-require_relative '../lib/chinook_database/models/employee'
-require_relative '../lib/chinook_database/models/genre'
-require_relative '../lib/chinook_database/models/invoice'
-require_relative '../lib/chinook_database/models/invoice_line'
-require_relative '../lib/chinook_database/models/media_type'
-require_relative '../lib/chinook_database/models/play_list'
-require_relative '../lib/chinook_database/models/track'
+require 'chinook_database/models/album'
+require 'chinook_database/models/artist'
+require 'chinook_database/models/customer'
+require 'chinook_database/models/employee'
+require 'chinook_database/models/genre'
+require 'chinook_database/models/invoice'
+require 'chinook_database/models/invoice_line'
+require 'chinook_database/models/media_type'
+require 'chinook_database/models/playlist'
+require 'chinook_database/models/track'
 
 module ChinookDatabase
   def self.path

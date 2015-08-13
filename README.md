@@ -54,7 +54,7 @@ InvoiceLine.count
 MediaType.count
 # => 5
 
-PlayList.count
+Playlist.count
 # => 18
 
 Track.count
