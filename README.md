@@ -41,101 +41,99 @@ Artist.count
 
 ## The Schema
 
-```
-# Artists, albums and tracks
+### Artists, albums and tracks
 
-genres
-  id
-  name
+  genres
+    id
+    name
+    
+  media_types
+    id
+    name
   
-media_types
-  id
-  name
-
-artists
-  id
-  name
+  artists
+    id
+    name
+    
+  albums
+    id
+    title
+    artist_id
+    
+  tracks
+    id
+    name
+    album_id
+    media_type_id
+    genre_id
+    composer
+    milliseconds
+    bytes
+    unit_price
   
-albums
-  id
-  title
-  artist_id
+### Playlists and tracks they contain
   
-tracks
-  id
-  name
-  album_id
-  media_type_id
-  genre_id
-  composer
-  milliseconds
-  bytes
-  unit_price
+  playlists
+    id
+    name
   
-# Playlists and tracks they contain
+  playlists_tracks
+    playlist_id
+    track_id
   
-playlists
-  id
-  name
-
-playlists_tracks
-  playlist_id
-  track_id
+### Employees and reporting structure
   
-# Employees and reporting structure
+  employees
+    id
+    last_name
+    first_name
+    title
+    reports_to_employee_id  (employee)
+    birth_date
+    hire_date
+    address
+    city
+    state
+    country
+    postal_code
+    phone
+    fax
+    email
   
-employees
-  id
-  last_name
-  first_name
-  title
-  reports_to_employee_id  (employee)
-  birth_date
-  hire_date
-  address
-  city
-  state
-  country
-  postal_code
-  phone
-  fax
-  email
+### Customers and invoices
   
-# Customers and invoices
+  customers
+    id
+    first_name
+    last_name
+    company
+    address
+    city
+    state
+    country
+    postal_code
+    phone
+    fax
+    email
+    support_rep_id  (employee)
   
-customers
-  id
-  first_name
-  last_name
-  company
-  address
-  city
-  state
-  country
-  postal_code
-  phone
-  fax
-  email
-  support_rep_id  (employee)
-
-invoices
-  id
-  customer_id
-  invoice_date
-  billing_address
-  billing_city
-  billing_state
-  billing_country
-  billing_postal_code
-  total
-  
-invoice_lines
-  id
-  invoice_id
-  track_id
-  unit_price
-  quantity
-```
+  invoices
+    id
+    customer_id
+    invoice_date
+    billing_address
+    billing_city
+    billing_state
+    billing_country
+    billing_postal_code
+    total
+    
+  invoice_lines
+    id
+    invoice_id
+    track_id
+    unit_price
+    quantity
 
 ## Development
 
