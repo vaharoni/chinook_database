@@ -10,9 +10,7 @@ require "chinook_database"
 # require "pry"
 # Pry.start
 
-require 'sqlite3'
-require 'active_record'
-ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ChinookDatabase.path
+ChinookDatabase.connect
 
 require "irb"
 IRB.start

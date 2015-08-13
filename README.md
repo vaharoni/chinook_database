@@ -25,7 +25,10 @@ Or install it yourself as:
 
 ```ruby
 require 'chinook_database'
-ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ChinookDatabase.path
+
+# Same as running:
+# ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ChinookDatabase.path
+ChinookDatabase.connect
 
 Album.count
 # => 347
